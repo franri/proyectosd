@@ -39,7 +39,7 @@ export class RegistroComponent implements OnInit {
     const val = this.form.value;
     this.loading = true;
     if (val.user && val.password) {
-      this.authService.login(val.user, val.password)
+      this.authService.signUp(val.user, val.password)
         .pipe(first())
         .subscribe(
           data => {
